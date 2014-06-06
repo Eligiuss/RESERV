@@ -1,0 +1,124 @@
+/* 
+    Document   : style
+    Created on : 16 déc. 2013, 21:30:43
+    Author     : MCarnaud
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+}
+
+h5{
+    font-size:16px;
+}
+
+.navbar{
+    width:100%;
+    background-color:#444;
+}
+
+.navbar-text{
+    color:#e7e7e7;
+}
+
+#title{
+    color:#e7e7e7;
+    font-size:24px;
+}
+
+#connecteEnTantQue{
+    color:#e7e7e7;
+}
+
+root { 
+    display: block;
+}
+
+.form-start
+{
+    margin-top: 12%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.titre-start
+{
+    text-align: center;
+}
+
+.cache
+{
+    margin-right: 5%; 
+}
+
+.menu-gauche
+{
+    margin-top: 10%;
+    width: 100%;
+    margin-left: 1%;
+    padding-right: 2%;
+}
+
+.bande-gauche
+{
+    position: fixed;
+    background-color: gainsboro;
+    width: 10%;
+    height: 100%;
+    background-color:#eee;
+}
+
+.titreSection{
+    text-align:center;
+}
+
+html {
+    height: 100%;
+}
+
+.nouveau
+{
+    margin-top:2%;
+    margin-left:15%;
+}
+
+.milieuPage{
+    align:center;
+    margin-left:20%;
+    margin-right:20%;
+}
+
+.recherche
+{
+    margin-left: 18%;
+    margin-right: 4%;
+    margin-top: 2%; 
+}
+
+#logout{
+    float:right;
+    margin-top:2.5%;
+    margin-right:24px;
+}
+
+.tableListe{
+    margin-left:10%;
+    width:90%;
+}
+
+.tableListe td:hover{
+    cursor: pointer;
+}
+
+.tableHisto{
+    margin-left:15%;
+    width:85%;
+}
+
+.table tbody tr:hover th {
+    background-color: transparent;
+}
