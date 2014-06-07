@@ -23,20 +23,6 @@ if (!isset($_SESSION["ID"])) {
     </thead>
 
 <?php
-
-    function truncate($value, $length) {
-        if (strlen($value) > $length) {
-            $value = substr($value, 0, $length);
-            $n = 0;
-            while (substr($value, -1) != chr(32)) {
-                $n++;
-                $value = substr($value, 0, $length - $n);
-            }
-            $value = $value . " ...";
-        }
-        return $value;
-    }
-    
     $SQL = "SELECT s.nom nomSalle, s.numero, s.capacite, s.tarif, s.id, DATE_FORMAT(l.debut, '%d %M %Y') AS jour, DATE_FORMAT(l.debut, '%H:%i') AS debutLoc, DATE_FORMAT(l.fin, '%H:%i') AS finLoc FROM location l
             INNER JOIN salles s ON s.id = l.id_asso
             WHERE l.id_asso = '".$_SESSION["ID"]."'

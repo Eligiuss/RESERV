@@ -15,7 +15,6 @@ if (!isset($_SESSION["ID"])) {
             <th>N°</th>
             <th>Capacité</th>
             <th>Tarif à l'heure</th>
-            <th>Louée par</th>
         </tr>
     </thead>
 
@@ -37,9 +36,8 @@ if (!isset($_SESSION["ID"])) {
     include 'connexion_BDD.php';
 
 
-    $SQL = "SELECT a.nom nomAsso, s.nom nomSalle, s.numero, s.capacite, s.tarif, s.id FROM salles s
+    $SQL = "SELECT s.nom nomSalle, s.numero, s.capacite, s.tarif, s.id FROM salles s
             LEFT JOIN location l ON s.id = l.id_salle
-            LEFT JOIN association a ON a.id = l.id_asso
             ORDER BY s.numero ASC";
 
     $rs = $cnx->query($SQL);
@@ -54,13 +52,10 @@ if (!isset($_SESSION["ID"])) {
                             ' . $info->numero. '
                         </td>
                         <td>
-                            ' . $info->capacite . '
+                            ' . $info->capacite . ' personnes
                         </td>
                         <td>
-                            ' . $info->tarif . '
-                        </td>
-                        <td>
-                            ' . $info->nomAsso . '
+                            ' . $info->tarif . '€
                         </td>
                     </tr>';
     }
